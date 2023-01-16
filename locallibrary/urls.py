@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='catalog/', permanent=True)), #Add URL maps to redirect the base URL to our application
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 # Use static() to add URL mapping to serve static files during development (only)
